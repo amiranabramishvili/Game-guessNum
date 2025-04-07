@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GuessNum</title>
+    <script src="apps.js" defer></script>
+</head>
+
+<body>
+    <div class="conteiner">
+        <h1>GuessNumber</h1>
+        <div class="flexDiv">
+            <div class="gameDiv">
+                <input type="number" id="guessInput" placeholder="Write Number" min="1" max="100">
+                <button onclick="checkGuess()">Check</button>
+                <p id="message"></p>
+                <div>
+                    <p id="attempt">Try #</p>
+                    <button id="resetButton" style="display: none;" onclick="resetGame()">Reset!</button>
+                </div>
+            </div>
+            <div class="rulesDiv">
+                <h1>Rules!</h1>
+                <p>Guess a number from 1 to 100,write it and guess !</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
