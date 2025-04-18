@@ -1,10 +1,13 @@
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempt = 0;
+console.log(secretNumber);
+
 
 function checkGuess() {
     const attemptDisplay = document.getElementById('attempt');
     const message = document.getElementById('message');
     const userGuess = document.getElementById('guessInput').value;
+    const buttona = document.getElementById('btnna')
 
     if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
         message.textContent = 'Please write a number between 1 and 100!';
@@ -22,6 +25,7 @@ function checkGuess() {
     } else {
         message.textContent = 'Need lower, please try again!';
     }
+
 }
 
 function resetGame() {
@@ -32,5 +36,11 @@ function resetGame() {
     document.getElementById('guessInput').value = '';
     document.getElementById('resetButton').style.display = 'none';
     document.getElementById('fireworks').innerHTML = '';
+
 }
 
+document.getElementById('guessInput').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        checkGuess();
+    }
+})
